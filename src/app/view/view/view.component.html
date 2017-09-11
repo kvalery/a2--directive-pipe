@@ -1,0 +1,26 @@
+<div>
+
+  <input type="text"
+         appSpaceRemove
+         [(ngModel)]="text">
+
+  <button (click)="go()">
+    go
+  </button>
+  <br/>
+  <br/>
+
+  <p [appMyHover]="'gainsboro'" [nextColor]="'lightyellow'">
+    {{text}}
+  </p>
+
+  <p appMyCouter (counterNum)='newCounter($event)'>
+    {{ text | simple: '*' }}
+
+    <span style="float: right">
+      {{counter}}-couter from component
+    </span>
+
+  </p>
+
+</div>
